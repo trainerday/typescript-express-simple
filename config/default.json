@@ -1,0 +1,5 @@
+{"db":{
+  "conStr" : "test",
+  "testMsg" : "Hello from default config"
+  }
+}

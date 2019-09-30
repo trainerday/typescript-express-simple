@@ -3,6 +3,8 @@ import express from 'express'
 import path from 'path'
 import createError from 'http-errors'
 import apiRouter from './routes/api'
+import config from 'config'
+const dbConfig: any = config.get('db')
 
 const app = express()
 app.set('views', path.join(__dirname, 'views'))
@@ -14,8 +16,8 @@ app.get('/', (req, res): void => {
 
 app.use('/api', apiRouter)
 
-app.get('/hello', (req, res): void => {
-  res.send('Hello world!')
+app.get('/config', (req, res): void => {
+  res.send(dbConfig.testMsg)
 })
 
 app.use(function(req, res, next) {

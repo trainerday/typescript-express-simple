@@ -1,40 +1,22 @@
+** This is the simplest express type script project **
+It's basically like express generator but even simpler.
 
--- how I created this
-npm init -y
-npm install express
-npm install eslint --save--dev
-npm install @typescript-eslint/eslint-plugin --save-dev
-npm install @typescript-eslint/parser --save-dev
-npm install jest --save--dev
-npm prettier jest --save--dev
-npm install typescript --save
-npm install lodash --save
+It contains these features that are configured
+ - Typescript
+ - Express
+ - Jest
+ - Lodash
+ - prettier
+ - eslint
+ - ts-node-dev
+ - config for deployment configuration
 
-copy tsconfig from cycling-converter
-copy .eslintrc.js from cycling-converter
-create .gitignore
-create readme.md
-npm install ts-node --save
-copied package.json scripts from cycling-converter
-create .prettierrc.js
-create index.test.js example
-npm install @types/jest --save
-npm install --save-dev @types/node @types/express
-npm install http-errors --save
-created index.ts
-npm install eslint-config-prettier --save--dev
-npm install eslint-plugin-prettier --save--dev
+Just download or clone this project
+run   npm install
+npm run serve
 
+Then go here and you can see the config working
+http://localhost:8080/config
 
-
-
-start verdaccio
-increase version
-npm run build
-npm publish --registry http://localhost:4873/
-
-on other project
-NPM_CONFIG_REGISTRY=http://localhost:4873 npm i cycling-converter
-
-
+or npm run test
 
