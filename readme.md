@@ -20,3 +20,7 @@ http://localhost:8080/config
 
 or npm run test
 
+Notes
+npm run serve uses ts-node-dev which watches for .ts file changes and only recompiles the specific file so it is very fast.
+
+npm run serve:all  watches JSON files too but compiles slower than 'npm run serve'

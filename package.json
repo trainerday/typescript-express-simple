@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "// ------ DEVELOPMENT ----- //": "",
-    "serve": "ts-node-dev src/index.ts",
+    "serve": "ts-node-dev src/index.ts --watch ./src/,./config/",
+    "serve:all": "nodemon -e 'ts html json' --ignore '/node_modules src/**/*.test.ts' --exec 'ts-node' src/index.ts",
     "debug": "nodemon src/index.ts",
     "format": "prettier --write \"src/**/*.ts\" \"dist/**/*.js\"",
     "convert": "ts-jest config:migrate ./jest.config.js",
@@ -36,6 +37,7 @@
     "http-errors": "^1.7.3",
     "jest": "^24.9.0",
     "lodash": "^4.17.15",
+    "nodemon": "^1.19.3",
     "path": "^0.12.7",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
